@@ -38,6 +38,11 @@ function secciones_rutas_dhcp(){
             "ip_asignadas",
             [function(boxIP, contenido){ ipAsignadas(boxIP, contenido) }]
         ],
+        [
+            "./archivos/dhcp/traducciones.txt",
+            "traducciones",
+            [function(boxIP, contenido){ traducciones(boxIP, contenido) }]
+        ],
     ]
     return seccion_dhcp
 }
