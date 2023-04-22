@@ -1,0 +1,7 @@
+@
+@
+ns1
+www
+www
+ns2
+ftp

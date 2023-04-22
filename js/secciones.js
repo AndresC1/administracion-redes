@@ -6,7 +6,7 @@ let createElementH1 = (texto, StyleH1 = "w-full rounded-md py-2 text-center font
 }
 function disco(boxIP, contenido){
     let contenidoLine = contenido.split('\n')
-    contenidoLine.map((line, item) => {
+    contenidoLine.map((line) => {
         if(line.length != 0) {
             let createRow = document.createElement("div")
             createRow.classList = "w-full h-32 flex-wrap rounded-md flex flex-col justify-evenly items-center font-semibold text-sm bg-[#222] p-2"
@@ -51,6 +51,14 @@ function zonas(boxIP, contenido){
     let contenidoLine = contenido.split('\n')
     contenidoLine.map((line) => {
         if(line.length != 0){
+            boxIP.appendChild(createElementH1(line, "w-full rounded-md bg-[#222] py-2 text-center font-semibold"))
+        }
+    })
+}
+function traducciones(boxIP, contenido){
+    let contenidoLine = contenido.split('\n')
+    contenidoLine.map((line) => {
+        if(line.length != 0 && line != "@\r"){
             boxIP.appendChild(createElementH1(line, "w-full rounded-md bg-[#222] py-2 text-center font-semibold"))
         }
     })
@@ -109,4 +117,4 @@ function creacionGrafica(valores, datos, grafica, colores){
     });
 }
 
-export  {disco, ipAsignadas, ip, memoria, zonas, enrutamiento, puertos, sitios}
+export  {disco, ipAsignadas, ip, memoria, zonas, enrutamiento, puertos, sitios, traducciones}

@@ -1,4 +1,4 @@
-import {  memoria, disco, ip, ipAsignadas, enrutamiento, zonas, sitios, puertos } from "./secciones.js"
+import {  memoria, disco, ip, ipAsignadas, enrutamiento, zonas, sitios, puertos, traducciones } from "./secciones.js"
 
 function secciones_rutas(ruta){
     const secciones = [
@@ -48,6 +48,11 @@ function seccion_rutas_dns(){
             "./archivos/dns/zonas.txt",
             "zonas",
             [function(boxIP, contenido){ zonas(boxIP, contenido) }]
+        ],
+        [
+            "./archivos/dns/traducciones.txt",
+            "traducciones",
+            [function(boxIP, contenido){ traducciones(boxIP, contenido) }]
         ],
     ]
     return seccion_dns
