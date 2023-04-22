@@ -1,0 +1,10 @@
+.no-scrollbar::-webkit-scrollbar{
+    width: 0rem;
+    display: none;
+}
+.no-scrollbar::-webkit-scrollbar-thumb{
+    width: 0rem;
+}
+.no-scrollbar{
+    scroll-behavior: smooth;
+}

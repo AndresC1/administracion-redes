@@ -1,0 +1,6 @@
+000-default.conf 	DocumentRoot /var/www/html
+default-ssl.conf 		DocumentRoot /var/www/html
+equipo.conf 	DocumentRoot /var/www/equipo/
+redes.conf 	DocumentRoot /var/www/redes/
+sistemas.conf 	DocumentRoot /var/www/sistemas/
+zona1.conf 	DocumentRoot /var/www/zona1/

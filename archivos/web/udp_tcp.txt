@@ -1,0 +1,9 @@
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN      544/sshd            
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN      544/sshd            
+tcp6       0      0 [::]:http               [::]:*                  LISTEN      560/apache2         
+udp        0      0 0.0.0.0:bootps          0.0.0.0:*                           882/dhcpd           
+udp        0      0 0.0.0.0:bootpc          0.0.0.0:*                           404/dhclient        
+udp        0      0 0.0.0.0:20780           0.0.0.0:*                           882/dhcpd           
+udp6       0      0 [::]:35056              [::]:*                              882/dhcpd           

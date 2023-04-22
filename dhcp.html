@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#222] text-[#ccc] max-h-[100vh] h-[100vh] flex justify-start items-start">
+    <nav class="bg-[#333] w-2/12 h-full">
+        <ul class="flex justify-center items-start flex-col p-2 gap-y-2">
+        <a href='/dhcp.html' class="w-full h-14 flex justify-start items-center gap-x-2 font-medium text-sm pl-4 rounded-lg hover:bg-zinc-800 uppercase">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" height="1.3em" width="1.3em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z" clip-rule="evenodd"></path></svg>
+                Maquina dhcp
+            </a>
+        <a href='/dns.html' class="w-full h-14 flex justify-start items-center gap-x-2 font-medium text-sm pl-4 rounded-lg hover:bg-zinc-800 uppercase">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" height="1.3em" width="1.3em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z" clip-rule="evenodd"></path></svg>
+                Maquina dns
+            </a>
+            <a href='/web.html' class="w-full h-14 flex justify-start items-center gap-x-2 font-medium text-sm pl-4 rounded-lg hover:bg-zinc-800 uppercase">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" height="1.3em" width="1.3em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z" clip-rule="evenodd"></path></svg>
+                Maquina web
+            </a>
+        </ul>
+    </nav>
+    <div class="w-10/12 flex-col h-full gap-y-4 flex justify-start items-center p-4">
+        <h1 class="uppercase w-full text-center font-bold text-2xl">dhcp</h1>
+        <div class="w-11/12 flex justify-evenly items-center flex-wrap gap-2 overflow-auto no-scrollbar">
+            <div class="w-96 h-80 bg-black flex-col flex justify-start items-start p-4 rounded-lg">
+                <h1 class="uppercase text-sm font-bold text-white text-center w-full m-2">ip asignadas</h1>
+                <div id="ip_asignadas" class="flex justify-start items-center flex-col w-full overflow-auto no-scrollbar gap-y-1"></div>
+            </div>
+            <div class="w-96 h-80 bg-black flex-col flex justify-center items-center p-4 rounded-lg">
+                <h1 class="uppercase text-sm font-bold text-white text-center w-full m-2">ip maquina</h1>
+                <div id="ip" class="w-full flex justify-cneter items-center text-[#fff]"></div>
+            </div>
+            <div class="w-96 h-80 bg-black flex-col flex justify-start items-start p-4 rounded-lg overflow-auto no-scrollbar">
+                <h1 class="uppercase text-sm font-bold text-white text-center w-full m-2">memoria</h1>
+                <div id="memoria" class="w-full flex justify-center items-center text-[#fff]">
+                    <div class="w-8/12">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="w-96 h-80 bg-black flex-col flex justify-start items-start p-4 rounded-lg overflow-auto no-scrollbar">
+                <h1 class="uppercase text-sm font-bold text-white text-center w-full m-2">swap</h1>
+                <div id="memoria" class="w-full flex justify-center items-center text-[#fff]">
+                    <div class="w-8/12">
+                        <canvas id="myChartSwap"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="w-96 h-80 bg-black flex-col flex justify-center items-center p-4 rounded-lg">
+                <h1 class="uppercase text-sm font-bold text-white text-center w-full m-2">disco</h1>
+                <div id="disco" class="w-full flex-col flex justify-start items-center text-[#fff] gap-2 overflow-auto no-scrollbar">
+                </div>
+            </div>
+            <div class="w-96 h-80 bg-black flex-col flex justify-center items-center p-4 rounded-lg">
+                <h1 class="uppercase text-sm font-bold text-white text-center w-full m-2">enrutamiento</h1>
+                <div id="enrutamiento" class="w-full flex-col flex justify-start items-center text-[#fff] gap-2 overflow-auto no-scrollbar">
+                </div>
+            </div>
+            <div class="w-96 h-80 bg-black flex-col flex justify-center items-center p-4 rounded-lg">
+                <h1 class="uppercase text-sm font-bold text-white text-center w-full m-2">puertos udp y tcp</h1>
+                <div id="puertos" class="w-full flex-col flex justify-start items-center text-[#fff] gap-2 overflow-auto no-scrollbar">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./js/arraySection.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/dhcp_data.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+S.ficheros     Tamaño Usados  Disp Uso% Montado en
+udev             983M      0  983M   0% /dev
+tmpfs            200M    14M  187M   7% /run
+/dev/sda1        7.9G   1.3G  6.2G  18% /
+tmpfs            997M      0  997M   0% /dev/shm
+tmpfs            5.0M      0  5.0M   0% /run/lock
+tmpfs            997M      0  997M   0% /sys/fs/cgroup
+tmpfs            200M      0  200M   0% /run/user/0
